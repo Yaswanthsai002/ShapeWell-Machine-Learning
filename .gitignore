@@ -9,7 +9,7 @@ __pycache__/
 #Dataset Folders
 DATA SET/
 DATASET/
-*.pkl
+*.pkl/
 
 # Distribution / packaging
 .Python
