@@ -10,6 +10,8 @@ __pycache__/
 DATA SET/
 DATASET/
 *.pkl/
+Notebooks/
+yoga_poses/
 
 # Distribution / packaging
 .Python
