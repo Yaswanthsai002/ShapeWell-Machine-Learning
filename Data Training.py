@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, r2_score
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 
-df = pd.read_csv("Asana.csv")
+df = pd.read_csv("Asanaa.csv")
 
 X = df.iloc[:,:-1].values
 Y = df.iloc[:,-1].values

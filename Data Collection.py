@@ -17,7 +17,7 @@ for p in mp_holistic.PoseLandmark:
         data.append(x + "_visibility")
 data.append("NAME_OF_THE_ASANA")
 
-path = 'yoga_poses/train'
+path = 'DATASET/TRAIN'
 
 landmarks = []
 

@@ -124,7 +124,7 @@ while camera_video.isOpened():
             body_language_prob = model.predict_proba(X)[0]
             #print(body_language_class,round(body_language_prob[np.argmax(body_language_prob)],2)*100)
             if round(body_language_prob[np.argmax(body_language_prob)],2)*100 >= 70 :
-                cv2.putText(frame, str("Success "+str(body_language_class,int(round(body_language_prob[np.argmax(body_language_prob)],2)*100))), (300, 100),cv2.FONT_HERSHEY_PLAIN, 2, (0, 255, 0), 3)
+                cv2.putText(frame, str("Success "+str(body_language_class)+str(int(round(body_language_prob[np.argmax(body_language_prob)],2)*100))), (300, 100),cv2.FONT_HERSHEY_PLAIN, 3, (0, 255, 0), 3)
                 # 2. Right hand
                 '''mp_drawing.draw_landmarks(frame, results.right_hand_landmarks, mp_holistic.HAND_CONNECTIONS, 
                                          mp_drawing.DrawingSpec(color=(255,255,255), thickness=2, circle_radius=4),
@@ -144,7 +144,7 @@ while camera_video.isOpened():
                                          )
             else:
                 cv2.putText(frame, str("Unknown Pose"), (300, 100),cv2.FONT_HERSHEY_PLAIN, 5, (0, 0, 255), 3)
-                cv2.putText(frame, '{} {}'.format(body_language_class,int(round(body_language_prob[np.argmax(body_language_prob)],2)*100)), (1200, 100),cv2.FONT_HERSHEY_PLAIN, 3, (0, 0, 255), 3)
+                cv2.putText(frame, '{} {}'.format(body_language_class,int(round(body_language_prob[np.argmax(body_language_prob)],2)*100)), (1200, 100),cv2.FONT_HERSHEY_PLAIN, 5, (0, 0, 255), 3)
                 # 2. Right hand
                 '''mp_drawing.draw_landmarks(frame, results.right_hand_landmarks, mp_holistic.HAND_CONNECTIONS, 
                                          mp_drawing.DrawingSpec(color=(255,255,255), thickness=2, circle_radius=4),
