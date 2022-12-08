@@ -1,4 +1,5 @@
 import pandas as pd
+import pickle
 from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -31,9 +32,8 @@ knn.fit(x_train, y_train)
 print("Random Forest Classifier : ", round(accuracy_score(y_test,rfr.predict(x_test)), 2))
 print("Decision Tree Classifier : ", round(accuracy_score(y_test,dtc.predict(x_test)), 2))
 print("K Neighbors   Classifier : ", round(accuracy_score(y_test,knn.predict(x_test)), 2))
+print(df['NAME_OF_THE_ASANA'].value_counts())
 
-
-import pickle
 
 f=open('model.pkl','wb')
 pickle.dump(rfr,f)

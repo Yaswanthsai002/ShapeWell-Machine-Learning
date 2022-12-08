@@ -12,6 +12,7 @@ DATASET/
 *.pkl/
 Notebooks/
 yoga_poses/
+.gitignore/
 
 # Distribution / packaging
 .Python

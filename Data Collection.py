@@ -1,12 +1,10 @@
 import mediapipe as mp
 import cv2
 import os
-
+import csv
+    
 mp_holistic = mp.solutions.holistic
-holistic = mp_holistic.Holistic(static_image_mode=True, 
-                                min_detection_confidence=0.5, 
-                                model_complexity=2)
-
+holistic = mp_holistic.Holistic(static_image_mode=True, min_detection_confidence=0.5, min_tracking_confidence=0.5,model_complexity=0)
 
 data = []
 for p in mp_holistic.PoseLandmark:
@@ -17,7 +15,7 @@ for p in mp_holistic.PoseLandmark:
         data.append(x + "_visibility")
 data.append("NAME_OF_THE_ASANA")
 
-path = 'DATASET/TRAIN'
+path = 'yoga_poses/train'
 
 landmarks = []
 
@@ -40,8 +38,6 @@ for asana in os.listdir(path):
         except Exception as e:
             print(e)
 
-
-import csv
 file = open("Asana.csv","w")
 writer = csv.writer(file)
 writer.writerow(data)
