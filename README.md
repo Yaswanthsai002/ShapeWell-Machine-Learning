@@ -12,6 +12,9 @@ They are
 
 ## 1) Data Collection
 It is a process of collection of landmarks of joints in a human body. To perform this process we use two modules called OpenCV, Mediapipe.
+
+Image dataset of Yoga Asana is taken from here - https://www.kaggle.com/datasets/niharika41298/yoga-poses-dataset
+
 ### a) OpenCV - It is used to perform operations on images like reading, writing etc. For more information please refer to this - https://opencv.org/
 
 ![image](https://user-images.githubusercontent.com/57896227/206229705-4bd49e14-af95-4cab-b230-89347905d041.png)
