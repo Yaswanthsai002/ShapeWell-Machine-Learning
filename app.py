@@ -48,6 +48,8 @@ def detectPose(image, pose, display=True):
 
 # Pose Estimation
 def pose_estimation(model, mp_holistic, mp_drawing, detectPose):
+    
+    
     # Setup Holistic Pose function for video.
     pose_video = mp_holistic.Holistic(static_image_mode=False, min_detection_confidence=0.5, min_tracking_confidence=0.5,model_complexity=0)
 
@@ -55,8 +57,8 @@ def pose_estimation(model, mp_holistic, mp_drawing, detectPose):
 
     # Initialize the VideoCapture object to read from the webcam.
     camera_video = cv2.VideoCapture(0)
-    # camera_video.set(3, screen_width)
-    # camera_video.set(4, screen_height)
+    camera_video.set(3, screen_width)
+    camera_video.set(4, screen_height)
 
     # Initialize a resizable window.
     cv2.namedWindow('Pose Classification', cv2.WINDOW_NORMAL)
