@@ -44,7 +44,8 @@ def detectPose(image, pose, display=True):
     return output_image, results
 
 # To run the program on GPU we use this decorator.
-#@jit(target_backend='cuda')
+@jit(target_backend='cuda')
+
 # Pose Estimation
 def pose_estimation(model, mp_holistic, mp_drawing, detectPose):
     # Setup Holistic Pose function for video.
