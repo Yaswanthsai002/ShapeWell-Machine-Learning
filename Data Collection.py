@@ -4,7 +4,7 @@ import os
 import csv
     
 mp_holistic = mp.solutions.holistic
-holistic = mp_holistic.Holistic(static_image_mode=True, min_detection_confidence=0.5, min_tracking_confidence=0.5,model_complexity=0)
+holistic = mp_holistic.Holistic(static_image_mode=True, model_complexity=2)
 
 data = []
 for p in mp_holistic.PoseLandmark:
