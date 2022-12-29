@@ -1,6 +1,5 @@
 import cv2
-import time
-import math
+from time import time
 import mediapipe as mp
 import pyautogui
 import numpy as np
