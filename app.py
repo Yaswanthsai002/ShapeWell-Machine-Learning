@@ -165,4 +165,4 @@ def pose_estimation(model, label_decoder, mp_holistic, mp_drawing):
     cv2.destroyAllWindows()
 
 
-pose_estimation(model, mp_holistic, mp_drawing)
+pose_estimation(model, label_decoder, mp_holistic, mp_drawing)
