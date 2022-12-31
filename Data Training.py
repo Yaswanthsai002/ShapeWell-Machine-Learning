@@ -7,7 +7,8 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import cross_val_score
 
 
-df = pd.read_csv("Asana.csv")
+# df = pd.read_csv("Asana.csv")
+df = pd.read_csv("Asana1.csv")
 
 X = df.iloc[:,:-1].values
 Y = df.iloc[:,-1].values
