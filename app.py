@@ -5,7 +5,6 @@ import pyautogui
 import numpy as np
 import pickle
 import pandas as pd
-from numba import jit
 
 model, label_decoder = pickle.load(open('model.pkl', 'rb'))
 
@@ -16,8 +15,6 @@ mp_holistic = mp.solutions.holistic
 mp_drawing = mp.solutions.drawing_utils
 
 
-# To run the program on GPU we use this decorator.
-@jit(target_backend='cuda')
 # Pose Estimation
 def pose_estimation(model, label_decoder, mp_holistic, mp_drawing):
 
