@@ -35,6 +35,6 @@ It is a process of reading, extracting the values from .csv file.These extracted
 ## 3) App
 Final stage of the process where we use the pre-trained ML model for predicting Yoga asanas in the real time using Webcam feed of the device.It shows the landmarks of the keypoints in red colour if the machine is not able to recognize the asana (Incoorect way of doing) and turns into green colour if the machine recognizes the asana (Correct way of doing).
 
-![Slide1](https://user-images.githubusercontent.com/57896227/206350923-54b85530-0939-4156-9661-d9cf5b7451e4.JPG)
+![Screenshot (25)](https://user-images.githubusercontent.com/57896227/210140917-eb185108-9fe2-41c6-8794-709a4909834f.png)
 
                                                Fig:- Machine detects the Asana (Correct way of doing)
